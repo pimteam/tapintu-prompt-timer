@@ -1,5 +1,7 @@
 <?php
 	function prompt_timer(){
-	include(TAPINTU_JORUNAL_PATH."/views/journal-prompt.html.php");
+		ob_start();
+		include(TAPINTU_JORUNAL_PATH."/views/journal-prompt.html.php");
+		$content = ob_get_clean();
+		return $content;
 	}
-	?>
